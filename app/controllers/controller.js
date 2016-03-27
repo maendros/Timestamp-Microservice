@@ -5,22 +5,27 @@ module.exports=function(app){
     
    app.get('/:query', function(req,res) {
   var myDate=req.params.query;
-  myDate = moment(req.params.query, "MMMM DD, YYYY");
+  myDate = moment(req.params.query, "MMMM DD, YYYY",true);
   
   if( !myDate.isValid()) {
        res.json({
-      "unix": null,
-      "normal": null
+      'unix': null,
+      'normal': null
     });
+
     } 
 
 
-  if(myDate.isValid()) {
+  else if(myDate.isValid()) {
     res.json({
-      "unix": myDate.format("X"),
-      "normal": myDate.format("MMMM D, YYYY")
+      'unix': myDate.format("X"),
+      'normal': myDate.format("MMMM DD, YYYY")
     });
+
+  
 }
+
+
     
    });
     
