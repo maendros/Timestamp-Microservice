@@ -12,7 +12,8 @@
     "url": "https://github.com/maendros/Timestamp-Microservice.git"
   },
   "keywords": [
-    "timestamp"
+    "timestamp",
+    "microservice"
   ],
   "author": "Paschalis",
   "license": "ISC",
